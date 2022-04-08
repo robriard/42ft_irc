@@ -1,0 +1,13 @@
+  888888 88888888b.   .d8888b.  888888b.   
+    888   888   Y88b d88P  Y88b 888  "88b  
+    888   888    888 888    888 888  .88P  
+    888   888   d88P 888        8888888K.  
+    888   8888888P"  888  88888 888  "Y88b 
+    888   888 T88b   888    888 888    888 
+    888   888  T88b  Y88b  d88P 888   d88P 
+  888888 8888   T88b  "Y8888P88 8888888P"
+Welcome on ft_irc 42 project !!!
+authors:
+    - sgaubert <sgaubert@student.42.fr>
+    - riblanc <riblanc@student.42.fr>
+    - robriard <robriard@student.42.fr>
