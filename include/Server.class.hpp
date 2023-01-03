@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
+/*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:40:05 by simon             #+#    #+#             */
-/*   Updated: 2022/04/08 10:04:32 by unknow           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:38:21 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,7 +158,8 @@ class Server {
 
 			Parser parser(lexer);
 			this->_config = parser.parse();
-			set("port", port);
+			if (password.size())
+				set("port", port);
 			set("password", password);
 			checkConfig();
 			console.log("start of irc server");

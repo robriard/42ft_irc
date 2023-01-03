@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_irc.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
+/*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:40:12 by simon             #+#    #+#             */
-/*   Updated: 2022/04/05 02:50:19 by riblanc          ###   ########.fr       */
+/*   Updated: 2023/01/03 13:30:22 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@
 
 int main(int argc, char const *argv[])
 {
-	if (argc != 3)
+	if (argc != 2 || argc != 3)
 		console.breakError("Bad number of argument: " + string(*argv) + " <port> <password>");
 	Server server;
 	try {
-		server.init(argv[1], argv[2]);
+		if (argc == 2)
+			server.init(argv[1]);
+		else
+			server.init(argv[1], argv[2]);
 		server.displayConfig();
 		server.run();
 	} catch(Server::ServerException except) {
